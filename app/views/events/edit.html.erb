@@ -1,0 +1,18 @@
+<h1>Editing Event #<%= @event.id %></h1>
+
+<form action="/events/<%= @event.id %>/update">
+  <div>
+    <label for="name">Name</label><br />
+    <input id="name" name="name" value="<%= @event.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="bestperformance">Best Performance</label><br />
+    <input id="bestperformance" name="bestperformance" value="<%= @event.bestperformance  %>" type="text" />
+  </div>
+  <br>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

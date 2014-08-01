@@ -1,0 +1,24 @@
+<h1>Event #<%= @event.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @event.name %></p>
+</div>
+<div>
+  <strong>Best Performance</strong>:<br />
+  <p><%= @event.bestperformance %></p>
+</div>
+<div>Event's Athletes</div>
+  <ul>
+    <% @event.event_athletes.each do |event_athlete| %>
+    <li><%= event_athlete.athlete.name %></li>
+  <% end %>
+  </ul>
+<div>Event's Sports</div>
+  <ul>
+    <% @event.sport_events.each do |sport_event| %>
+    <li><%= sport_event.sport.name %> </li>
+  <% end %>
+  </ul>
+<button><a href="/events/<%= @event.id %>/edit">Edit</a>&nbsp</button>
+<button><a href="/events/<%= @event.id %>/destroy">Destroy</a></button>

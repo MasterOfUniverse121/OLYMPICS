@@ -1,0 +1,22 @@
+<h1>Editing Event in Sport #<%= @sport_event.id %></h1>
+
+<form action="/sport_events/<%= @sport_event.id %>/update">
+  <div>
+    <label for="sport_id">Sport</label><br />
+    <input id="sport_id" name="sport_id" value="<%= @sport_event.sport_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="event_id">Event</label><br />
+    <input id="event_id" name="event_id" value="<%= @sport_event.event_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="arena">Arena</label><br />
+    <input id="arena" name="arena" value="<%= @sport_event.arena  %>" type="text" />
+  </div>
+  <br>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

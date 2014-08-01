@@ -1,0 +1,17 @@
+<h1>Event in Sport #<%= @sport_event.id %></h1>
+
+<div>
+  <strong>Sport</strong>:<br />
+  <p><%= @sport_event.sport.name %></p>
+</div>
+<div>
+  <strong>Event</strong>:<br />
+  <p><%= @sport_event.event.name %></p>
+</div>
+<div>
+  <strong>Arena</strong>:<br />
+  <p><%= @sport_event.arena %></p>
+</div>
+
+<button><a href="/sport_events/<%= @sport_event.id %>/edit">Edit</a> &nbsp</button>
+<button><a href="/sport_events/<%= @sport_event.id %>/destroy">Destroy</a></button>

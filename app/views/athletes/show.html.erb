@@ -1,0 +1,22 @@
+<h1>Athlete #<%= @athlete.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @athlete.name %></p>
+</div>
+<div>
+  <strong>Age</strong>:<br />
+  <p><%= @athlete.age %></p>
+</div>
+<div>
+  <strong>Country</strong>:<br />
+  <p><%= @athlete.country %></p>
+</div>
+<div>Athlete's Events</div>
+  <ul>
+    <% @athlete.event_athletes.each do |event_athlete| %>
+    <li><%= event_athlete.event.name %>&nbsp(<%= event_athlete.gender %>)</li>
+    <% end %>
+  </ul>
+<button><a href="/athletes/<%= @athlete.id %>/edit">Edit</a>&nbsp</button>
+<button><a href="/athletes/<%= @athlete.id %>/destroy">Destroy</a></button>

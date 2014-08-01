@@ -1,0 +1,22 @@
+<h1>Editing Sport #<%= @sport.id %></h1>
+
+<form action="/sports/<%= @sport.id %>/update">
+  <div>
+    <label for="name">Name</label><br />
+    <input id="name" name="name" value="<%= @sport.name  %>" type="text" />
+  </div>
+  <div>
+    <label for="description">Description</label><br />
+    <input id="description" name="description" value="<%= @sport.description  %>" type="text" />
+  </div>
+  <div>
+    <label for="equipment">Equipment</label><br />
+    <input id="equipment" name="equipment" value="<%= @sport.equipment  %>" type="text" />
+  </div>
+  <br>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

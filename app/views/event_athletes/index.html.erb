@@ -1,0 +1,29 @@
+<h1>Athletes in Events</h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Event  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+      <th>Athlete &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+      <th>Gender</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @event_athletes.each do |event_athlete| %>
+    <tr>
+          <td><%= event_athlete.event.name %></td>
+          <td><%= event_athlete.athlete.name %></td>
+          <td><%= event_athlete.gender %> &nbsp &nbsp</td>
+          <td><button><a href="/event_athletes/<%= event_athlete.id %>">Show</a></button>&nbsp</td>
+          <td><button><a href="/event_athletes/<%= event_athlete.id %>/edit">Edit</a></button>&nbsp</td>
+          <td><button><a href="/event_athletes/<%= event_athlete.id %>/destroy">Destroy</a></button>&nbsp</td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

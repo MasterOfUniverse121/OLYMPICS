@@ -1,0 +1,17 @@
+<h1>Athlete in Event #<%= @event_athlete.id %></h1>
+
+<div>
+  <strong>Event</strong>:<br />
+  <p><%= @event_athlete.event.name %></p>
+</div>
+<div>
+  <strong>Athlete</strong>:<br />
+  <p><%= @event_athlete.athlete.name %></p>
+</div>
+<div>
+  <strong>Gender</strong>:<br />
+  <p><%= @event_athlete.gender %></p>
+</div>
+
+<button><a href="/event_athletes/<%= @event_athlete.id %>/edit">Edit</a>&nbsp</button>
+<button><a href="/event_athletes/<%= @event_athlete.id %>/destroy">Destroy</a></button>

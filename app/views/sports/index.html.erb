@@ -1,0 +1,28 @@
+<h1>Sports</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name &nbsp &nbsp &nbsp &nbsp</th>
+      <th>Description &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</th>
+      <th>Equipment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @sports.each do |sport| %>
+    <tr>
+          <td><%= sport.name %></td>
+          <td><%= sport.description %></td>
+          <td><%= sport.equipment %>  &nbsp &nbsp </td>
+           <td><button><a href="/sports/<%= sport.id %>">Show</a></button>&nbsp</td>
+          <td><button><a href="/sports/<%= sport.id %>/edit">Edit</a></button>&nbsp</td>
+          <td><button><a href="/sports/<%= sport.id %>/destroy">Destroy</a></button></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

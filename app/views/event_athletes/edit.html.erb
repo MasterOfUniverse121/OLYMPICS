@@ -1,0 +1,22 @@
+<h1>Editing Athlete in Event #<%= @event_athlete.id %></h1>
+
+<form action="/event_athletes/<%= @event_athlete.id %>/update">
+  <div>
+    <label for="event_id">Event</label><br />
+    <input id="event_id" name="event_id" value="<%= @event_athlete.event_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="athlete_id">Athlete</label><br />
+    <input id="athlete_id" name="athlete_id" value="<%= @event_athlete.athlete_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="gender">Gender</label><br />
+    <input id="gender" name="gender" value="<%= @event_athlete.gender  %>" type="text" />
+  </div>
+  <br>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+
