@@ -9,6 +9,7 @@ class SportsController < ApplicationController
   end
 
   def new
+    @sports = Sport.all
   end
 
   def create

@@ -3,11 +3,19 @@
 <form action="/sport_events/<%= @sport_event.id %>/update">
   <div>
     <label for="sport_id">Sport</label><br />
-    <input id="sport_id" name="sport_id" value="<%= @sport_event.sport_id  %>" type="text" />
+   <select name = "sport_id">
+      <% @sports.each do |sport| %>
+      <option value = "<%= sport.id %>"><%=sport.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <label for="event_id">Event</label><br />
-    <input id="event_id" name="event_id" value="<%= @sport_event.event_id  %>" type="text" />
+     <select name = "event_id">
+      <% @events.each do |event| %>
+      <option value = "<%= event.id %>"><%= event.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <label for="arena">Arena</label><br />

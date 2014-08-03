@@ -3,15 +3,24 @@
 <form action="/create_event_athlete">
   <div>
     <label for="event_id">Event</label><br />
-    <input id="event_id" name="event_id" type="text" />
+    <select name = "event_id">
+      <% @events.each do |event| %>
+      <option value = "<%= event.id %>"><%= event.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <label for="athlete_id">Athlete</label><br />
-    <input id="athlete_id" name="athlete_id" type="text" />
+     <select name = "athlete_id">
+       <% @athletes.each do |athlete| %>
+       <option value = "<%= athlete.id %>"><%= athlete.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <label for="gender">Gender</label><br />
-    <input id="gender" name="gender" type="text" />
+    <input type="radio" name="gender" value="Male">Male<br>
+    <input type="radio" name="gender" value="Female">Female
   </div>
   <br>
   <div>

@@ -3,11 +3,7 @@
 <form action="/create_athlete">
   <div>
     <label for="name">Name</label><br>
-    <select>
-      <% @athlete.event_athletes.each do |event_athlete| %>
-      <option><%= event_athlete.athlete.name %></option>
-      <% end %>
-    </select>
+    <input id="name" name = "name" type = "text"
   </div>
   <div>
     <label for="age">Age</label><br>

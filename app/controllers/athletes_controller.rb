@@ -9,6 +9,7 @@ class AthletesController < ApplicationController
   end
 
   def new
+    @athletes = Athlete.all
   end
 
   def create
@@ -26,6 +27,7 @@ class AthletesController < ApplicationController
 
   def edit
     @athlete = Athlete.find_by(id: params[:id])
+    @athletes = Athlete.all
   end
 
   def update

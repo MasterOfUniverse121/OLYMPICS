@@ -3,15 +3,24 @@
 <form action="/event_athletes/<%= @event_athlete.id %>/update">
   <div>
     <label for="event_id">Event</label><br />
-    <input id="event_id" name="event_id" value="<%= @event_athlete.event_id  %>" type="text" />
+    <select name = "event_id">
+      <% @events.each do |event| %>
+      <option value = "<%= event.id %>"><%= event.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <label for="athlete_id">Athlete</label><br />
-    <input id="athlete_id" name="athlete_id" value="<%= @event_athlete.athlete_id  %>" type="text" />
+    <select name = "name">
+      <% @athletes.each do |athlete| %>
+       <option value = "<%= athlete.id %>"><%= athlete.name %></option>
+      <% end %>
+    </select>
   </div>
   <div>
     <label for="gender">Gender</label><br />
-    <input id="gender" name="gender" value="<%= @event_athlete.gender  %>" type="text" />
+    <input type="radio" name="gender" value="male">Male<br>
+    <input type="radio" name="gender" value="female">Female
   </div>
   <br>
   <div>

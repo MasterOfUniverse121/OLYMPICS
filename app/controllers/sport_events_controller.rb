@@ -9,6 +9,9 @@ class SportEventsController < ApplicationController
   end
 
   def new
+    @sport_events = SportEvent.all
+    @sports = Sport.all
+    @events = Event.all
   end
 
   def create
@@ -26,6 +29,8 @@ class SportEventsController < ApplicationController
 
   def edit
     @sport_event = SportEvent.find_by(id: params[:id])
+    @sports = Sport.all
+    @events = Event.all
   end
 
   def update

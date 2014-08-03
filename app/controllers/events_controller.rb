@@ -9,6 +9,7 @@ class EventsController < ApplicationController
   end
 
   def new
+    @events = Event.all
   end
 
   def create
